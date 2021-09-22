@@ -1,4 +1,4 @@
-package com.vinil;
+package com.vinil.sealed;
 
 /**
  * https://openjdk.java.net/jeps/409
