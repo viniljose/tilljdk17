@@ -26,5 +26,15 @@ public final class Truck extends Vehicle implements Service{
         } else {
             throw new RuntimeException("Unknown instance of Vehicle");
         }
+        
+        Vehicle vehicle1 = new Car(4,"KL011234");
+        //Pattern Matching
+        if (vehicle1 instanceof Car car) {
+            System.out.println( car.getNumberOfSeats());
+        } else if (vehicle1 instanceof Truck truck) {
+            System.out.println( truck.getLoadCapacity());
+        } else {
+            throw new RuntimeException("Unknown instance of Vehicle");
+        }
     }
 }
