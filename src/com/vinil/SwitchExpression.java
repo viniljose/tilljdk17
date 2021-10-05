@@ -5,7 +5,7 @@ public class SwitchExpression {
         SwitchExpression switchExpression = new SwitchExpression();
         System.out.println(switchExpression.oldSwitch("verna"));
         System.out.println(switchExpression.newSwitch("baleno"));
-
+        System.out.println(switchExpression.switchYield("Innova"));
     }
 
     private String  oldSwitch(String car){
@@ -35,6 +35,20 @@ public class SwitchExpression {
             case "alto","swift","baleno" -> "Maruti";
             default -> "car";
         };
+    }
+    
+    private String switchYield(String car){
+        return switch (car){
+            case "i10", "i20","verna" -> "Hyundai";
+            case "alto","swift","baleno" -> "Maruti";
+            case "Polo","Innova" -> {
+                if("Polo".equals(car))
+                    yield "Volkswagen";
+                else
+                    yield "Toyota";
 
+            }
+            default -> "car";
+        };
     }
 }
