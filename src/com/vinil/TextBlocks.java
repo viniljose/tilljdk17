@@ -6,6 +6,7 @@ public class TextBlocks {
         System.out.println(textBlocks.html());
         System.out.println(textBlocks.getIgnoredNewLines());
         System.out.println(textBlocks.getTextWithEscapes());
+        System.out.println(textBlocks.getFormattedText("ABCD"));
     }
 
     private String html(){
@@ -30,5 +31,11 @@ public class TextBlocks {
             whitespace
             and other escapes \"""
             """;
+    }
+    
+     private String getFormattedText(String parameter) {
+        return """
+            Some parameter: %s
+            """.formatted(parameter);
     }
 }
