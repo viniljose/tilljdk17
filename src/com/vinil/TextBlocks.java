@@ -5,6 +5,7 @@ public class TextBlocks {
         TextBlocks textBlocks = new TextBlocks();
         System.out.println(textBlocks.html());
         System.out.println(textBlocks.getIgnoredNewLines());
+        System.out.println(textBlocks.getTextWithEscapes());
     }
 
     private String html(){
@@ -21,5 +22,13 @@ public class TextBlocks {
         return """
             This is a long text which looks to \
             have a newline but actually does not""";
+    }
+    
+    private String getTextWithEscapes() {
+        return """
+            "fun" with
+            whitespace
+            and other escapes \"""
+            """;
     }
 }
